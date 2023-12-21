@@ -1,0 +1,52 @@
+basit_filtre Kodda;
+
+- Cümleleri ayırma
+- Noktalama işaretleri kaldırma
+- Tüm kelimeleri küçük harf yapma
+- Rakamları ve tüm sayısal ifadeleri kaldırma
+- Stopwords yani etkisiz kelimeleri kaldırma 
+- 1-2 harfli kelimeleri kaldırma
+- İngiliz alfabesi harf ve karakterleri dışındaki karakterleri kaldırma
+- Cümlenin 3 Kelimeden uzun olup olmadığını kontrolü
+- Cümlenin ingilizce olup olmadığını kontrol etme
+- Sonuçları düzenli bir şekilde yeni bir metin belgesi (txt) dosyasına yazdırma
+
+işlemleri yapılmaktadır.
+
+anahtar_kelimeler_ile_filtreleme dosyasında ise ekstra olarak kod içerisinde istediğiniz anahtar kelimelerin bulunduğu
+cümleleri toplatabilirsiniz. Anahtar kelime dosyasının kullanımı aşağıda anlatılmıştır.
+
+
+
+Taratmak istediğiniz karmaşık ingilizce veriyi txt formatında kaynak_metin.txt olarak belirtin.
+
+Genel filtreleme için basit_filtre_TR.py dosyasını çalıştırın.
+
+Sadece belirli anahtar kelimelerin bulunduğu cümleleri istiyorsanız anahtar_kelime_ile_filtreleme.py dosyasında
+kodun üst kısmında bulunan anahtar_kelimeler = ["kelime", "kelime2"] kısmında kelime1 veya kelime2 yerine yazabilirsiniz.
+
+Ekstra ekleyeceğiniz kelimeleri kapalı parantez içerisinde tutarak (") tırnak içerisinde yazmaya ve her anahtar kelime arasına
+virgül atarak ekleyin. 
+
+Anahtar kelime silecekseniz tırnakları ve virgülü silmeyi unutmayın
+
+-anahtar kelime ekleme -> anahtar_kelimeler = ["kelime", "kelime2", "kelime3"] -> kelime3'ü tırnakla yazdık ve öncesinde virgül koyduk.
+
+-anahtar kelime çıkarma -> anahtar_kelimeler = ["kelime"] -> kelime2'yi tırnaklarıyla beraber sildik ve aradaki virgülü kaldırdık.
+
+
+! İşlemler metinin uzunluğu veya bilgisayarınızın gücüne göre değişiklik gösterebilir.
+400 bin satırlık metin belgesi için muhtemel bekleme süresi 3-5dk 
+
+Kendi karışık veri txt dosyanızın adını değiştirmek yerine kodların en altında bulunan metin_isleme('kaynak_metin.txt', 'sonuc_metin.txt') kısmındaki kaynak_metin.txt kısmını kendi dosya adınızla değiştirebilirsiniz. Aynı şekilde sonuc_metin.txt kısmını değiştirerek sonuçların yazdıralacağı metin belgesi adını da düzenleyebilirsiniz.
+
+
+----------------------------------------------------------------------------------------------------------------------------
+Üniversite projesi olarak yapmaya başladığım bir iş, kaynak_metin kısmında benim Game kelimesine ait internetten topladığım
+karmaşık veriyi örnek olarak koydum. Üzerinde test edebilirsiniz. Filtreleme ve analiz üzerine ekstra çalışmalar gelicek belki de görsel arayüze sahip bir servise dönüştürebilirim.
+Anahtar kelimeye göre istenilen kaynaktan (Twitter, Reddit, Makaleler, Dökümanlar, Forumlar vb.) veri toplamaya yönelik servis yapıp entegre etmeyi düşünüyorum. 
+
+Soru/İstek veya herhangi bir konuda
+
+Discord: @nsk 
+LinkedIn: https://www.linkedin.com/in/enes-ertu%C4%9Frul-k-a7a52410b/
